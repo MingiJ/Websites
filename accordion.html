@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <style>
+      body,
+      .jumbotron {
+        padding: 30px;
+      }
+      body       {
+          background: #EFEFEF;
+      }
+      html  {
+        overflow-y: show;
+      }
+      .accordion    {
+          background: #FFF;
+          border-radius: 5px;
+          padding : 30px;
+      }
+      .question {
+          border-top: 1px solid #EEE;
+          padding: 20px;
+          cursor: pointer;
+          position: relative;
+      }
+      ul    {
+        margin-bottom: 0;
+      }
+      .question .glyphicon{
+        position: absolute;
+        right: 20px;
+        top: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: #C00C00;
+        transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)all;
+
+      }
+      .answer {
+       max-height: 0; 
+       overflow: hidden;
+        transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)all;
+      }
+      .answer p {
+        padding: 20px;
+      }
+
+      .accordion li.open .answer{
+        max-height: 150px;
+      }
+      .accordion li.open .question .glyphicon{
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordion">
+      <ul class="list-unstyled">
+        <li class="open">
+          <div class="question">
+            <h2>Will I be Rich?</h2>
+
+            <span class="glyphicon glyphicon-chevron-down"></span>
+          </div>
+          <div class="answer">
+            <p>
+              Absolutely. Lorem ipsum dolor, sit amet consectetur adipisicing
+              elit. Repudiandae, ratione mollitia numquam, minus doloremque ea
+              quisquam adipisci harum eligendi vitae atque. Maxime rem beatae
+              natus. Quas et soluta odio placeat.
+            </p>
+            <li>
+            <div class="question">
+                <h2>What's for Dinner?</h2>
+    
+                <span class="glyphicon glyphicon-chevron-down"></span>
+              </div>
+              <div class="answer">
+                <p>
+                  Anything you want!. Lorem ipsum dolor, sit amet consectetur adipisicing
+                  elit. Repudiandae, ratione mollitia numquam, minus doloremque ea
+                  quisquam adipisci harum eligendi vitae atque. Maxime rem beatae
+                  natus. Quas et soluta odio placeat.
+                </p>
+              </li>
+              <li>
+                <div class="question">
+                    <h2>How was your Day?</h2>
+        
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                  <div class="answer">
+                    <p>
+                      Great. Lorem ipsum dolor, sit amet consectetur adipisicing
+                      elit. Repudiandae, ratione mollitia numquam, minus doloremque ea
+                      quisquam adipisci harum eligendi vitae atque. Maxime rem beatae
+                      natus. Quas et soluta odio placeat.
+                    </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      const accordion = document.querySelector('.accordion');
+      const items = accordion.querySelectorAll('li');
+      const questions = accordion.querySelectorAll('.question');
+
+      function toggleAccordion(){
+        const thisItem = this.parentNode; 
+      items.forEach(item=>{
+        if(thisItem==item){
+          thisItem.classList.toggle('open');
+          return;
+        }
+        item.classList.remove('open');
+        
+      });
+    }
+      questions.forEach(question=>question.addEventListener('click',toggleAccordion));
+    </script>
+  </body>
+</html>

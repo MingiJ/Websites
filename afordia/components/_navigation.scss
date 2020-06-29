@@ -1,0 +1,24 @@
+nav {
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    font-size: 1.4rem;
+    height: 8rem;
+    width: 100%;
+    z-index: 1000;
+    
+    ul {
+        display: flex;
+
+    }
+}
+
+.nav-item {
+
+    &:not(:last-child) {
+        margin-right: 2rem;
+    }
+}

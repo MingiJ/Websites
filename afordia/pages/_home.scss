@@ -1,0 +1,102 @@
+.home {
+    position: relative;
+    top: 0;
+    left: 25%;
+    height: 100vh;
+    width: 75%;
+    //margin-top: -8rem;
+    display: flex;
+
+}
+
+.home-left, .home-right {
+    position: relative;
+    height: 100%;
+    padding-top: 8rem;
+}
+
+.home-left {
+    background-color: #eee;
+    width: 50rem;
+}
+
+.intro-wrapper {
+    position: absolute;
+    top: 50%;
+    left: -50%;
+
+    p {
+        font-size: 3rem;
+        font-weight: 200;
+        border-left: solid 1px #999;
+        padding-left: 2rem;
+    }
+
+    h1 {
+        font-weight: bolder;
+        font-size: 8rem;
+        color: $grey-dark;
+        letter-spacing: 3px;
+    }
+}
+.home-right{
+   padding-left: 6rem;
+}
+.slogan{
+    margin-top: 6rem;
+    position: relative;
+    font-size: 4rem;
+    color: $grey-dark;
+    font-weight: 350;
+    left: -25%;
+}
+
+.motto{
+    margin-top: 5rem;
+    p{
+        
+        font-size: 1.3rem;
+        color: #777;
+        line-height: 160%;
+        margin-bottom: 2rem;
+        
+    }
+    a{
+
+        font-size: 2rem;
+    }
+    width: 30rem;
+    border-left: solid 1px #999;
+    padding-left: 3rem;
+    margin-bottom: 5rem;
+}
+
+.icon{
+    display: inline-block;
+    margin-left: 2rem;
+}
+.img-wrapper{
+    position: relative;
+    height: 15rem;
+    width: 25rem;
+    border: solid 1px #999;
+
+    img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: -40%;
+        top: 20%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+.ctrl{
+    display: inline-block;
+    position: absolute;
+    font-size: 10rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(214, 214, 214);
+    right: 0;
+}
